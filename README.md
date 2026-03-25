@@ -3,7 +3,7 @@
 
 ## Project Title
 Library Management System
----
+
 
 ## Problem Statement (max 150 words)
 Many educational institutions still manage library records manually using registers 
@@ -13,7 +13,7 @@ searching, updating, or generating reports require significant effort.To overcom
 object-oriented Library Management System digitally manages books, members, and borrowing activities. It 
 automates book issue and return processes, enables quick access to records, and improves accuracy while reducing 
 the administrative workload of library staff.
----
+
 
 ## Target User
 The system is designed primarily for librarians who manage library activities. Through a consolenbased
@@ -21,13 +21,12 @@ interface, librarians can maintain book records, register members, issue and ret
 library usage
 
 ## Core Features
-
-- 
-- 
-- 
-
----
-
+.Book Record Management – Add, modify, and remove books with unique IDs.
+. Member Management – Register and maintain member details.
+. Book Issue and Return – Track borrowed books and manage returns.
+. Search Functionality – Find books by title, author, or ID.
+. Report Generation – View available books, issued books, and borrowing records.
+. Exception Handling – Validate inputs and manage runtime errors
 ## OOP Concepts Used
 
 - Abstraction:
