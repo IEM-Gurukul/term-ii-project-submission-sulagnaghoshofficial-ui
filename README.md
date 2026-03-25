@@ -16,8 +16,9 @@ the administrative workload of library staff.
 ---
 
 ## Target User
-
----
+The system is designed primarily for librarians who manage library activities. Through a consolenbased
+interface, librarians can maintain book records, register members, issue and return books, and monitor
+library usage
 
 ## Core Features
 
