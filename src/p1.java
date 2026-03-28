@@ -1,26 +1,39 @@
 import java.util.*;
 
-class Book {
-    int id;
-    String title;
-    String author;
-    boolean isIssued;
+public class Book {
+    private int id;
+    private String title;
+    private String author;
+    private boolean isIssued;
 
-    Book(int id, String title, String author) {
+    public Book(int id, String title, String author) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.isIssued = false;
     }
-}
 
-class User {
-    int id;
-    String name;
+    public int getId() {
+        return id;
+    }
 
-    User(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public boolean isIssued() {
+        return isIssued;
+    }
+
+    public void issueBook() {
+        isIssued = true;
+    }
+
+    public void returnBook() {
+        isIssued = false;
+    }
+
+    public void display() {
+        System.out.println("ID: " + id +
+                " | Title: " + title +
+                " | Author: " + author +
+                " | Status: " + (isIssued ? "Issued" : "Available"));
     }
 }
 
