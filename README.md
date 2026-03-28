@@ -29,13 +29,11 @@ library usage
 . Exception Handling – Validate inputs and manage runtime errors
 ## OOP Concepts Used
 
-- Abstraction:
-- Inheritance:
-- Polymorphism:
-- Exception Handling:
-- Collections / Threads:
-
----
+• Abstraction – Person class defines common attributes like id and name.
+• Inheritance – Member and Librarian extend the Person class.
+• Polymorphism – Classes override displayInfo() to show relevant data.
+• Exception Handling – Manages invalid input and system errors.
+• Collections – Uses ArrayList/HashMap to store books and members.
 
 ## Proposed Architecture Description
 
