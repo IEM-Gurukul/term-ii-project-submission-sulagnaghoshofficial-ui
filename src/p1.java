@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Book {
+class Book {
     private int id;
     private String title;
     private String author;
@@ -30,63 +30,48 @@ public class Book {
     }
 
     public void display() {
-        System.out.println("ID: " + id +
-                " | Title: " + title +
-                " | Author: " + author +
-                " | Status: " + (isIssued ? "Issued" : "Available"));
+        System.out.println(id + " | " + title + " | " + author + " | " + (isIssued ? "Issued" : "Available"));
     }
 }
+
 
 class Library {
-    List<Book> books = new ArrayList<>();
-    List<User> users = new ArrayList<>();
+    private ArrayList<Book> books = new ArrayList<>();
 
-    void addBook(Book book) {
+    public void addBook(Book book) {
         books.add(book);
-        System.out.println("Book added successfully!");
+        System.out.println("Book added!");
     }
 
-    void viewBooks() {
+    public void showBooks() {
         for (Book b : books) {
-            System.out.println(b.id + " | " + b.title + " | " + b.author + " | Issued: " + b.isIssued);
+            b.display();
         }
     }
 
-    void addUser(User user) {
-        users.add(user);
-        System.out.println("User added successfully!");
-    }
-
-    void issueBook(int bookId) {
+    public void issueBook(int id) {
         for (Book b : books) {
-            if (b.id == bookId) {
-                if (!b.isIssued) {
-                    b.isIssued = true;
-                    System.out.println("Book issued successfully!");
-                } else {
-                    System.out.println("Book already issued!");
-                }
+            if (b.getId() == id && !b.isIssued()) {
+                b.issueBook();
+                System.out.println("Book issued!");
                 return;
             }
         }
-        System.out.println("Book not found!");
+        System.out.println("Book not available.");
     }
 
-    void returnBook(int bookId) {
+    public void returnBook(int id) {
         for (Book b : books) {
-            if (b.id == bookId) {
-                if (b.isIssued) {
-                    b.isIssued = false;
-                    System.out.println("Book returned successfully!");
-                } else {
-                    System.out.println("Book was not issued!");
-                }
+            if (b.getId() == id && b.isIssued()) {
+                b.returnBook();
+                System.out.println("Book returned!");
                 return;
             }
         }
-        System.out.println("Book not found!");
+        System.out.println("Invalid return.");
     }
 }
+
 
 public class LibraryManagementSystem {
     public static void main(String[] args) {
