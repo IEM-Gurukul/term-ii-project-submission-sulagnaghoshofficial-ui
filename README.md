@@ -12,7 +12,9 @@ Managing book inventories, member details, and borrowing records becomes difficu
 searching, updating, or generating reports require significant effort.To overcome these issues, the proposed 
 object-oriented Library Management System digitally manages books, members, and borrowing activities. It 
 automates book issue and return processes, enables quick access to records, and improves accuracy while reducing 
-the administrative workload of library staff.
+the administrative workload of library staff. 
+
+
 
 
 ## Target User
@@ -28,14 +30,11 @@ library usage
 . Report Generation – View available books, issued books, and borrowing records.
 . Exception Handling – Validate inputs and manage runtime errors
 ## OOP Concepts Used
-
-- Abstraction:
-- Inheritance:
-- Polymorphism:
-- Exception Handling:
-- Collections / Threads:
-
----
+• Abstraction – Person class defines common attributes like id and name.
+• Inheritance – Member and Librarian extend the Person class.
+• Polymorphism – Classes override displayInfo() to show relevant data.
+• Exception Handling – Manages invalid input and system errors.
+• Collections – Uses ArrayList/HashMap to store books and members.
 
 ## Proposed Architecture Description
 
