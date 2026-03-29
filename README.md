@@ -40,8 +40,9 @@ library usage
 ---
 
 ## Proposed Architecture Description
-
----
+The project follows a Controller–Model architecture. Book, Member, and Person act as Model classes
+representing library data. LibraryManager works as the Controller handling operations such as adding
+books, registering members, and processing issue/return transactions. The Main class acts as the interface with a consolenbased menu for user interaction.
 
 ## How to Run
 Requirements
