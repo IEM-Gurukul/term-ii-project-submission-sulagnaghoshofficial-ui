@@ -44,8 +44,31 @@ library usage
 ---
 
 ## How to Run
+Requirements
 
----
+JDK 8 or higher
+Command Prompt / Terminal
+
+Steps
+
+Open terminal and navigate to project folder:
+cd LibraryManagementSystem/src
+Compile all Java files:
+javac *.java
+Run the program:
+java Main
+
+Execution
+
+After running, a menu will appear with options:
+
+Add Book
+Show Books
+Issue Book
+Return Book
+Exit
+
+
 
 ## Git Discipline Notes
 Minimum 10 meaningful commits required.
