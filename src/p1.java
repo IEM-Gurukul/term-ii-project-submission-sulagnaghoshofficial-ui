@@ -34,7 +34,6 @@ class Book {
     }
 }
 
-
 class Library {
     private ArrayList<Book> books = new ArrayList<>();
 
@@ -68,74 +67,56 @@ class Library {
                 return;
             }
         }
-        System.out.println("Invalid return.") ;
-        
+        System.out.println("Invalid return.");
     }
 }
 
-
-public class LibraryManagementSystem {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Library lib = new Library();
 
         while (true) {
-            System.out.println("\n--- Library Menu ---");
-            System.out.println("1. Add Book");
-            System.out.println("2. View Books");
-            System.out.println("3. Add User");
-            System.out.println("4. Issue Book");
-            System.out.println("5. Return Book");
-            System.out.println("6. Exit");
+            System.out.println("\n1.Add 2.Show 3.Issue 4.Return 5.Exit");
+            int ch = sc.nextInt();
 
-            int choice = sc.nextInt();
-            sc.nextLine();
-
-            switch (choice) {
+            switch (ch) {
                 case 1:
-                    System.out.print("Enter Book ID: ");
+                    System.out.print("ID: ");
                     int id = sc.nextInt();
                     sc.nextLine();
-                    System.out.print("Enter Title: ");
+
+                    System.out.print("Title: ");
                     String title = sc.nextLine();
-                    System.out.print("Enter Author: ");
+
+                    System.out.print("Author: ");
                     String author = sc.nextLine();
+
                     lib.addBook(new Book(id, title, author));
                     break;
 
                 case 2:
-                    lib.viewBooks();
+                    lib.showBooks();
                     break;
 
                 case 3:
-                    System.out.print("Enter User ID: ");
-                    int uid = sc.nextInt();
-                    sc.nextLine();
-                    System.out.print("Enter Name: ");
-                    String name = sc.nextLine();
-                    lib.addUser(new User(uid, name));
+                    System.out.print("Enter ID: ");
+                    lib.issueBook(sc.nextInt());
                     break;
 
                 case 4:
-                    System.out.print("Enter Book ID to issue: ");
-                    int issueId = sc.nextInt();
-                    lib.issueBook(issueId);
+                    System.out.print("Enter ID: ");
+                    lib.returnBook(sc.nextInt());
                     break;
 
                 case 5:
-                    System.out.print("Enter Book ID to return: ");
-                    int returnId = sc.nextInt();
-                    lib.returnBook(returnId);
-                    break;
-
-                case 6:
-                    System.out.println("Exiting...");
                     return;
 
                 default:
-                    System.out.println("Invalid choice!");
+                    System.out.println("Invalid choice");
             }
         }
+
     }
-}
-// new line should be added soon
+}    
+
